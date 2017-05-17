@@ -1,0 +1,30 @@
+I = imread('cameraman.jpg');
+
+colormap(gray);
+roberts = edge(I, 'Roberts');
+subplot(2,2,1);
+imagesc(roberts);
+prewitt = edge(I, 'Prewitt');
+subplot(2,2,2);
+imagesc(prewitt);
+sobel = edge(I, 'Sobel');
+subplot(2,2,3);
+imagesc(sobel);
+canny = edge(I, 'Canny');
+subplot(2,2,4);
+imagesc(canny);
+
+figure;
+I_noise = imread('Blurred Cam.jpg');
+roberts = edge(I_noise, 'Roberts');
+subplot(2,2,1);
+imagesc(roberts);
+prewitt = edge(I_noise, 'Prewitt');
+subplot(2,2,2);
+imagesc(prewitt);
+sobel = edge(I_noise, 'Sobel');
+subplot(2,2,3);
+imagesc(sobel);
+canny = edge(I_noise, 'Canny');
+subplot(2,2,4);
+imagesc(canny);
